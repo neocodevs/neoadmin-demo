@@ -3,7 +3,7 @@ import { posts } from "../../data/posts";
 const headers = {
   type: "CRUD", // Specify the header as a `CRUD` type
   options: {
-    name: "Product", // Name the sidebar option and the page title
+    name: "Posts", // Name the sidebar option and the page title
     route: { path: "/posts" }, // Specify the page url
     posts,
     tableOptions: {
@@ -18,13 +18,20 @@ const headers = {
           property: "ID", // Specify the prop you want to show
         },
         {
-          property: "Image",
+          label: "Image",
+          property: "image",
+          type: "image",
+          tableOptions: {
+            show: false,
+          },
         },
         {
           property: "Title",
         },
         {
+          label: "Date",
           property: "Date",
+          type: "date",
         },
         {
           property: "Content",
