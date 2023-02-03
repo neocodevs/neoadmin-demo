@@ -12,33 +12,32 @@ const headers = {
       exact: true,
       component: () => {
         return (
-          <Container maxWidth="sm">
-            <Paper
-              style={{
-                padding: "16px",
-                margin: "16px",
-              }}
-            >
-              <Typography variant="h6">Movie Statistics</Typography>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
-                  <Typography variant="body1">
-                    Movies: {moviesData.movies}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <Typography variant="body1">
-                    Views in a year: {moviesData.views}
-                  </Typography>
-                </Grid>
+          <Paper
+            sx={{
+              padding: "16px",
+              margin: "16px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "16px",
+            }}
+            variant="outlined"
+            elevation={3}
+          >
+            <Typography variant="h6">Movie Statistics</Typography>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <Typography variant="body1">
+                  Movies: {moviesData.movies}
+                </Typography>
               </Grid>
-              <div
-                style={{
-                  height: 400,
-                }}
-              ></div>
-            </Paper>
-          </Container>
+              <Grid item xs={12} sm={6}>
+                <Typography variant="body1">
+                  Views in a year: {moviesData.views}
+                </Typography>
+              </Grid>
+            </Grid>
+          </Paper>
         );
       },
     },
