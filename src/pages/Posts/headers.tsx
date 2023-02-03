@@ -17,18 +17,19 @@ const headers = {
     {
       fields: [
         {
-          property: "id", // Specify the prop you want to show
+          label: "id",
+          property: "id",
+          type: "id", // Specify the prop you want to show
         },
         {
           label: "Image",
           property: "image",
           type: "image",
-          tableOptions: {
-            show: false,
-          },
         },
         {
+          label: "Title",
           property: "title",
+          type: "title",
         },
         {
           label: "Date",
@@ -36,13 +37,20 @@ const headers = {
           type: "date",
         },
         {
+          label: "Content",
           property: "content",
+          type: "html",
         },
         {
+          label: "Category",
           property: "category",
+          type: "category",
         },
         {
           property: "visible",
+          tableOptions: {
+            show: false,
+          },
         },
       ],
     },
