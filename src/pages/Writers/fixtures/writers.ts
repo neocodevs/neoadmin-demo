@@ -1,4 +1,6 @@
-export const writers = [
+import { Writer } from "../types";
+
+export const writers: Writer[] = [
   {
     id: 1,
     image:
