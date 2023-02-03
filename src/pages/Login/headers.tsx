@@ -1,4 +1,3 @@
-import React from "react";
 import { pages } from "@neoco/neoco-backoffice";
 
 const { Login } = pages;
