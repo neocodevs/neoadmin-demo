@@ -4,17 +4,12 @@ import { pages } from "@neoco/neoco-backoffice";
 const { Login } = pages;
 
 const loginRequest = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({
-        user: {
-          name: "test",
-          email: "test@mail.com",
-        },
-        token: "test",
-      });
-      reject("error");
-    }, 1000);
+  return Promise.resolve({
+    user: {
+      name: "test",
+      email: "test@mail.com",
+    },
+    token: "test",
   });
 };
 
