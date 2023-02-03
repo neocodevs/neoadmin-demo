@@ -1,4 +1,4 @@
-import { posts } from "../../data/posts";
+import { posts } from "./fixtures/posts";
 
 const headers = {
   type: "CRUD", // Specify the header as a `CRUD` type
