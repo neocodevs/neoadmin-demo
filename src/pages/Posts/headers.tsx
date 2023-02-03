@@ -3,9 +3,11 @@ import { posts } from "../../data/posts";
 const headers = {
   type: "CRUD", // Specify the header as a `CRUD` type
   options: {
-    name: "Posts", // Name the sidebar option and the page title
-    route: { path: "/posts" }, // Specify the page url
-    posts,
+    name: "Post", // Name the sidebar option and the page title
+    route: { path: "/posts", home: true }, // Specify the page url
+    requests: {
+      findRequest: () => Promise.resolve(posts),
+    },
     tableOptions: {
       isEditable: true, // Enable edit rows
       isDeletable: true, // Enable delete rows
@@ -15,7 +17,7 @@ const headers = {
     {
       fields: [
         {
-          property: "ID", // Specify the prop you want to show
+          property: "id", // Specify the prop you want to show
         },
         {
           label: "Image",
@@ -26,21 +28,21 @@ const headers = {
           },
         },
         {
-          property: "Title",
+          property: "title",
         },
         {
           label: "Date",
-          property: "Date",
+          property: "date",
           type: "date",
         },
         {
-          property: "Content",
+          property: "content",
         },
         {
-          property: "Category",
+          property: "category",
         },
         {
-          property: "Visible",
+          property: "visible",
         },
       ],
     },

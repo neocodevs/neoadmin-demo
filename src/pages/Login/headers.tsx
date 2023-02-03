@@ -19,6 +19,7 @@ const headers = {
     route: {
       path: "/",
       unAuth: true,
+      auth: false,
       exact: true,
       component: (props: any) => <Login {...props} onSubmit={loginRequest} />,
     },
