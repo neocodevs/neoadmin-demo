@@ -12,32 +12,40 @@ const headers = {
       exact: true,
       component: () => {
         return (
-          <Paper
-            sx={{
-              padding: "16px",
-              margin: "16px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: "16px",
-            }}
-            variant="outlined"
-            elevation={3}
-          >
-            <Typography variant="h6">Movie Statistics</Typography>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <Typography variant="body1">
-                  Movies: {moviesData.movies}
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Typography variant="body1">
-                  Views in a year: {moviesData.views}
-                </Typography>
-              </Grid>
+          <Grid container spacing={2}>
+            <Grid item sm={12} md={6}>
+              <Paper
+                sx={{
+                  padding: "16px",
+                  margin: "16px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "16px",
+                }}
+                variant="outlined"
+                elevation={3}
+              >
+                <Typography variant="h6">Movies:</Typography>
+                <Typography variant="body1">{moviesData.movies}</Typography>
+              </Paper>
             </Grid>
-          </Paper>
+            <Grid item sm={12} md={6}>
+              <Paper
+                sx={{
+                  padding: "16px",
+                  margin: "16px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "16px",
+                }}
+                variant="outlined"
+                elevation={3}
+              >
+                <Typography variant="h6">Views in a year:</Typography>
+                <Typography variant="body1">{moviesData.views}</Typography>
+              </Paper>
+            </Grid>
+          </Grid>
         );
       },
     },
