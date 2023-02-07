@@ -1,4 +1,4 @@
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid, Paper, styled, Typography } from "@mui/material";
 import { Bar } from "react-chartjs-2";
 import { CategoryScale } from "chart.js";
 import Chart from "chart.js/auto";
@@ -42,14 +42,17 @@ const headers = {
                     padding: "16px",
                     margin: "16px",
                     display: "flex",
+                    flexDirection: "column",
                     alignItems: "center",
                     gap: "16px",
                   }}
                   variant="outlined"
                   elevation={3}
                 >
-                  <Typography variant="h6">Posts:</Typography>
-                  <Typography variant="body1">{postsData.posts}</Typography>
+                  <Typography variant="h2" fontWeight="bold">
+                    {postsData.posts}
+                  </Typography>
+                  <Typography variant="h6">Total posts</Typography>
                 </Paper>
               </Grid>
               <Grid item sm={12} md={6}>
@@ -58,14 +61,17 @@ const headers = {
                     padding: "16px",
                     margin: "16px",
                     display: "flex",
+                    flexDirection: "column",
                     alignItems: "center",
                     gap: "16px",
                   }}
                   variant="outlined"
                   elevation={3}
                 >
-                  <Typography variant="h6">Views in a year:</Typography>
-                  <Typography variant="body1">{postsData.views}</Typography>
+                  <Typography variant="h2" fontWeight="bold">
+                    {postsData.views}
+                  </Typography>
+                  <Typography variant="h6">Views in a year</Typography>
                 </Paper>
               </Grid>
             </Grid>
@@ -91,3 +97,4 @@ const headers = {
 };
 
 export default headers;
+
