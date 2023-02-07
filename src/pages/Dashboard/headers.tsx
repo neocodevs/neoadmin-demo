@@ -38,7 +38,7 @@ const headers = {
           <>
             <Grid container spacing={2}>
               <Grid item sm={12} md={6}>
-                <Paper
+                <StyledPaper
                   sx={{
                     padding: "16px",
                     margin: "16px",
@@ -54,10 +54,10 @@ const headers = {
                     <CountUp end={postsData.posts} duration={2} />
                   </Typography>
                   <Typography variant="h6">Total posts</Typography>
-                </Paper>
+                </StyledPaper>
               </Grid>
               <Grid item sm={12} md={6}>
-                <Paper
+                <StyledPaper
                   sx={{
                     padding: "16px",
                     margin: "16px",
@@ -73,7 +73,7 @@ const headers = {
                     <CountUp end={postsData.views} duration={2} />
                   </Typography>
                   <Typography variant="h6">Views in a year</Typography>
-                </Paper>
+                </StyledPaper>
               </Grid>
             </Grid>
             <Bar
@@ -98,3 +98,7 @@ const headers = {
 };
 
 export default headers;
+
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  background: "linear-gradient(to right, #6a11cb 0%, #2575fc 100%)",
+}));
