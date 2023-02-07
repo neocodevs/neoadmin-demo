@@ -46,6 +46,7 @@ const headers = {
           tableOptions: {
             show: false,
           },
+          type: "checkbox",
         },
       ],
     },
