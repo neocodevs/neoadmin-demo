@@ -1,7 +1,7 @@
-import { moviesStatistics } from "../types";
+import { postsStatistics } from "../types";
 
-export const moviesData: moviesStatistics = {
-  movies: 100,
+export const postsData: postsStatistics = {
+  posts: 100,
   views: 10000,
   viewsPerMonth: [
     { month: "Jan", views: 1000 },

@@ -1,5 +1,5 @@
-export type moviesStatistics = {
-  movies: number;
+export type postsStatistics = {
+  posts: number;
   views: number;
   viewsPerMonth: {
     month: string;
