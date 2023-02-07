@@ -17,11 +17,6 @@ const headers = {
     {
       fields: [
         {
-          label: "id",
-          property: "id",
-          type: "id", // Specify the prop you want to show
-        },
-        {
           label: "Image",
           property: "image",
           type: "image",
