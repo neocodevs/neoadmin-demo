@@ -1,11 +1,16 @@
 import React from "react";
 import { pages } from "@neoco/neoco-backoffice";
-// import { loginRequest } from "utils/requests";
 
 const { Login } = pages;
 
 const loginRequest = () => {
-  console.log("loginRequest");
+  return Promise.resolve({
+    user: {
+      name: "test",
+      email: "test@mail.com",
+    },
+    token: "test",
+  });
 };
 
 const headers = {
@@ -16,7 +21,7 @@ const headers = {
       path: "/",
       unAuth: true,
       exact: true,
-      component: (props) => <Login {...props} onSubmit={loginRequest} />,
+      component: (props: any) => <Login {...props} onSubmit={loginRequest} />,
     },
   },
 };
