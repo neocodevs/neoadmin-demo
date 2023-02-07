@@ -39,7 +39,16 @@ const headers = {
         {
           label: "Category",
           property: "category",
-          type: "category",
+          type: "multiselect",
+          relation: {
+            isMulti: false,
+            name: "category",
+            nameProps: ["category"],
+            options: [
+              { value: "Dessert", label: "Dessert" },
+              { value: "Wellness", label: "Wellness" },
+            ],
+          },
         },
         {
           property: "visible",
