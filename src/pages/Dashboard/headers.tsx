@@ -2,6 +2,7 @@ import { Grid, Paper, styled, Typography } from "@mui/material";
 import { Bar } from "react-chartjs-2";
 import { CategoryScale } from "chart.js";
 import Chart from "chart.js/auto";
+import CountUp from "react-countup";
 
 import { postsData } from "./fixtures/postsData";
 
@@ -50,7 +51,7 @@ const headers = {
                   elevation={3}
                 >
                   <Typography variant="h2" fontWeight="bold">
-                    {postsData.posts}
+                    <CountUp end={postsData.posts} duration={2} />
                   </Typography>
                   <Typography variant="h6">Total posts</Typography>
                 </Paper>
@@ -69,7 +70,7 @@ const headers = {
                   elevation={3}
                 >
                   <Typography variant="h2" fontWeight="bold">
-                    {postsData.views}
+                    <CountUp end={postsData.views} duration={2} />
                   </Typography>
                   <Typography variant="h6">Views in a year</Typography>
                 </Paper>
@@ -97,4 +98,3 @@ const headers = {
 };
 
 export default headers;
-

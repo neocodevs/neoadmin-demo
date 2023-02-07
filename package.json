@@ -29,6 +29,7 @@
     "notistack": "^2.0.8",
     "react": "^16.14.0",
     "react-chartjs-2": "^5.2.0",
+    "react-countup": "^6.4.1",
     "react-dom": "^16.14.0",
     "react-i18next": "^12.1.4",
     "react-router-dom": "^5.3.0",
