@@ -24,7 +24,7 @@ const headers = {
         {
           label: "Title",
           property: "title",
-          type: "title",
+          type: "text",
         },
         {
           label: "Date",
