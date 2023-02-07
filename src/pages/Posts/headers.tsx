@@ -44,10 +44,10 @@ const headers = {
             isMulti: false,
             name: "category",
             nameProps: ["category"],
-            options: [
-              { value: "Dessert", label: "Dessert" },
-              { value: "Wellness", label: "Wellness" },
-            ],
+            options: posts.map((post) => ({
+              value: post.category,
+              label: post.category,
+            })),
           },
         },
         {
