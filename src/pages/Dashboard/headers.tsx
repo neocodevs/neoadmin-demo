@@ -24,9 +24,9 @@ const chartData = {
 const headers = {
   type: "Page",
   options: {
-    name: "Statistics",
+    name: "Dashboard",
     route: {
-      path: "/statistics",
+      path: "/dashboard",
       unAuth: false,
       auth: true,
       exact: true,
