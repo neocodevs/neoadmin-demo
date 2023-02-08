@@ -1,4 +1,5 @@
 import { posts } from "./fixtures/posts";
+import { Post } from "./types";
 
 const headers = {
   type: "CRUD", // Specify the header as a `CRUD` type
@@ -7,15 +8,15 @@ const headers = {
     route: { path: "/posts", home: true }, // Specify the page url
     requests: {
       findRequest: () => Promise.resolve(posts),
-      findOneRequest: ({ id }) => {
+      findOneRequest: ({ id }: { id: string }) => {
+        console.log(typeof id);
         return Promise.resolve(posts.find((post) => post.id === parseInt(id)));
       },
-      upsertRequest: (item) => {
-        const nextItem = {
+      upsertRequest: (item: Post) => {
+        const nextItem: Post = {
           ...item,
           id: posts.length + 1,
         };
-        console.log(item);
         posts.push(nextItem);
         return Promise.resolve(nextItem);
       },
