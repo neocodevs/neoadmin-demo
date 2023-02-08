@@ -1,5 +1,5 @@
 import { Box, Grid, Paper, Stack, styled, Typography } from "@mui/material";
-import { Bar, Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { CategoryScale } from "chart.js";
 import Chart from "chart.js/auto";
 import CountUp from "react-countup";
