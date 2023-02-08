@@ -7,6 +7,18 @@ const headers = {
     route: { path: "/posts", home: true }, // Specify the page url
     requests: {
       findRequest: () => Promise.resolve(posts),
+      findOneRequest: ({ id }) => {
+        return Promise.resolve(posts.find((post) => post.id === parseInt(id)));
+      },
+      upsertRequest: (item) => {
+        const nextItem = {
+          ...item,
+          id: posts.length + 1,
+        };
+        console.log(item);
+        posts.push(nextItem);
+        return Promise.resolve(nextItem);
+      },
     },
     tableOptions: {
       isEditable: true, // Enable edit rows
