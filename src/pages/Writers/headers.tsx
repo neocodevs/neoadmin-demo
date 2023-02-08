@@ -17,11 +17,6 @@ const headers = {
     {
       fields: [
         {
-          label: "id",
-          property: "id",
-          type: "id", // Specify the prop you want to show
-        },
-        {
           label: "Image",
           property: "image",
           type: "image",
@@ -29,7 +24,7 @@ const headers = {
         {
           label: "Name",
           property: "name",
-          type: "name",
+          type: "text",
         },
         {
           label: "Birthdate",
@@ -39,7 +34,7 @@ const headers = {
         {
           label: "Address",
           property: "address",
-          type: "address",
+          type: "text",
         },
         {
           label: "Email ",
@@ -51,6 +46,7 @@ const headers = {
           tableOptions: {
             show: false,
           },
+          type: "checkbox",
         },
       ],
     },
