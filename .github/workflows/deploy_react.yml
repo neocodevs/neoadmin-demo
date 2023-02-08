@@ -32,7 +32,7 @@ jobs:
           npm run build --if-present
           npm test
       - name: deploy to gh-pages
-        uses: victor-gv/actions-gh-pages@v3
+        uses: neocodevs/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./build
