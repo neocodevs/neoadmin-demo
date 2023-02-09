@@ -2,6 +2,9 @@ import { posts } from "./fixtures/posts";
 import { Post } from "./types";
 import { clone } from "../utils";
 
+const clone = (items: unknown[]): unknown[] =>
+  items.map((item: unknown) => (Array.isArray(item) ? clone(item) : item));
+
 const headers = {
   type: "CRUD", // Specify the header as a `CRUD` type
   options: {
