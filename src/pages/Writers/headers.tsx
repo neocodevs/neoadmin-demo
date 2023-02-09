@@ -1,5 +1,6 @@
 import { writers } from "./fixtures/writers";
 import { Writer } from "./types";
+import { clone } from "../utils";
 
 const headers = {
   type: "CRUD", // Specify the header as a `CRUD` type
@@ -7,7 +8,7 @@ const headers = {
     name: "Writer", // Name the sidebar option and the page title
     route: { path: "/writers" }, // Specify the page url
     requests: {
-      findRequest: () => Promise.resolve(writers),
+      findRequest: () => Promise.resolve(clone(writers)),
       findOneRequest: ({ id }: { id: string }) => {
         return Promise.resolve(
           writers.find((writer) => writer.id === parseInt(id))
