@@ -1,6 +1,6 @@
 import { posts } from "./fixtures/posts";
 import { Post } from "./types";
-import { clone } from "./utils";
+import { clone } from "../utils";
 
 const headers = {
   type: "CRUD", // Specify the header as a `CRUD` type
