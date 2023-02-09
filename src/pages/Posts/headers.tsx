@@ -2,6 +2,9 @@ import { posts } from "./fixtures/posts";
 import { Post } from "./types";
 import { clone } from "../utils";
 
+const clone = (items: unknown[]): unknown[] =>
+  items.map((item: unknown) => (Array.isArray(item) ? clone(item) : item));
+
 const headers = {
   type: "CRUD", // Specify the header as a `CRUD` type
   options: {
@@ -21,12 +24,10 @@ const headers = {
         return Promise.resolve(nextItem);
       },
       deleteRequest: ({ id }: { id: string }) => {
-        const index = posts.findIndex((post) => post.id === parseInt(id + 1));
-        if (index > -1) {
-          posts.splice(index, 1);
-          console.log(posts);
-        }
-        return Promise.resolve();
+        const index = parseInt(id) - 1;
+        posts.splice(index, 1);
+
+        return Promise.resolve(posts);
       },
     },
     tableOptions: {
