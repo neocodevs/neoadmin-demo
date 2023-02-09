@@ -1,4 +1,3 @@
-import React from "react";
 import { pages } from "@neoco/neoco-backoffice";
 
 const { Login } = pages;
@@ -20,6 +19,7 @@ const headers = {
     route: {
       path: "/",
       unAuth: true,
+      auth: false,
       exact: true,
       component: (props: any) => <Login {...props} onSubmit={loginRequest} />,
     },
