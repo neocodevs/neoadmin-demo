@@ -9,7 +9,6 @@ const headers = {
     requests: {
       findRequest: () => Promise.resolve(posts),
       findOneRequest: ({ id }: { id: string }) => {
-        console.log(typeof id);
         return Promise.resolve(posts.find((post) => post.id === parseInt(id)));
       },
       upsertRequest: (item: Post) => {
