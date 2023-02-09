@@ -20,6 +20,14 @@ const headers = {
         posts.push(nextItem);
         return Promise.resolve(nextItem);
       },
+      deleteRequest: ({ id }: { id: string }) => {
+        const index = posts.findIndex((post) => post.id === parseInt(id + 1));
+        if (index > -1) {
+          posts.splice(index, 1);
+          console.log(posts);
+        }
+        return Promise.resolve();
+      },
     },
     tableOptions: {
       isEditable: true, // Enable edit rows
