@@ -1,5 +1,6 @@
 import { posts } from "./fixtures/posts";
 import { Post } from "./types";
+import { clone } from "../utils";
 
 const headers = {
   type: "CRUD", // Specify the header as a `CRUD` type
@@ -7,7 +8,7 @@ const headers = {
     name: "Post", // Name the sidebar option and the page title
     route: { path: "/posts", home: true }, // Specify the page url
     requests: {
-      findRequest: () => Promise.resolve(posts),
+      findRequest: () => Promise.resolve(clone(posts)),
       findOneRequest: ({ id }: { id: string }) => {
         return Promise.resolve(posts.find((post) => post.id === parseInt(id)));
       },
