@@ -26,14 +26,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install aws-cli          
+      - name: Install aws-cli
       - uses: unfor19/install-aws-cli-action@v1
-        with:
-          version: 2     # default
-          verbose: false # default
-          arch: amd64    # allowed values: amd64, arm64
-          rootdir: ""    # defaults to "PWD"
-          workdir: ""    # defaults to "PWD/unfor19-awscli"    
       - name: npm ci, build and test
         run: |
           aws codeartifact login --tool npm --domain neoadmin-neoco --domain-owner 906935845275 --repository neoadmin-registry --namespace @neoco
