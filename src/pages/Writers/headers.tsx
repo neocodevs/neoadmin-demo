@@ -15,12 +15,18 @@ const headers = {
         );
       },
       upsertRequest: (item: Writer) => {
-        const nextItem: Writer = {
-          ...item,
-          id: writers.length + 1,
-        };
-        writers.push(nextItem);
-        return Promise.resolve(nextItem);
+        if (item.id) {
+          const index = writers.findIndex((writer) => writer.id === item.id);
+          writers[index] = item;
+          return Promise.resolve(writers[index]);
+        } else {
+          const nextItem: Writer = {
+            ...item,
+            id: writers.length + 1,
+          };
+          writers.push(nextItem);
+          return Promise.resolve(nextItem);
+        }
       },
       deleteRequest: ({ id }: { id: string }) => {
         const index = parseInt(id) - 1;
