@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/neoadmin-demo/static/js/main.a5e9e8b5.js",
+    "main.js": "/neoadmin-demo/static/js/main.f949cab5.js",
     "static/js/787.0617ee44.chunk.js": "/neoadmin-demo/static/js/787.0617ee44.chunk.js",
     "index.html": "/neoadmin-demo/index.html",
-    "main.a5e9e8b5.js.map": "/neoadmin-demo/static/js/main.a5e9e8b5.js.map",
+    "main.f949cab5.js.map": "/neoadmin-demo/static/js/main.f949cab5.js.map",
     "787.0617ee44.chunk.js.map": "/neoadmin-demo/static/js/787.0617ee44.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.a5e9e8b5.js"
+    "static/js/main.f949cab5.js"
   ]
 }
