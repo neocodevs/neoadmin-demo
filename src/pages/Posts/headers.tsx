@@ -16,7 +16,7 @@ const headers = {
         if (item.id) {
           const index = posts.findIndex((post) => post.id === item.id);
           posts[index] = item;
-          return Promise.resolve(posts[index]);
+          return Promise.resolve(posts);
         } else {
           const nextItem: Post = {
             ...item,
