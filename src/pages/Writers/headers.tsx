@@ -22,6 +22,12 @@ const headers = {
         writers.push(nextItem);
         return Promise.resolve(nextItem);
       },
+      deleteRequest: ({ id }: { id: string }) => {
+        const index = parseInt(id) - 1;
+        writers.splice(index, 1);
+
+        return Promise.resolve(writers);
+      },
     },
     tableOptions: {
       isEditable: true, // Enable edit rows
