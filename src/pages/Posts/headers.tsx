@@ -13,12 +13,18 @@ const headers = {
         return Promise.resolve(posts.find((post) => post.id === parseInt(id)));
       },
       upsertRequest: (item: Post) => {
-        const nextItem: Post = {
-          ...item,
-          id: posts.length + 1,
-        };
-        posts.push(nextItem);
-        return Promise.resolve(nextItem);
+        if (item.id) {
+          const index = posts.findIndex((post) => post.id === item.id);
+          posts[index] = item;
+          return Promise.resolve(posts[index]);
+        } else {
+          const nextItem: Post = {
+            ...item,
+            id: posts.length + 1,
+          };
+          posts.push(nextItem);
+          return Promise.resolve(nextItem);
+        }
       },
       deleteRequest: ({ id }: { id: string }) => {
         const index = parseInt(id) - 1;
