@@ -1,4 +1,5 @@
 import { pages } from "@neoco/neoco-backoffice";
+import { Header } from "@neoco/neoco-backoffice/src/types";
 
 const { Login } = pages;
 
@@ -12,7 +13,7 @@ const loginRequest = () => {
   });
 };
 
-const headers = {
+const headers: Header = {
   type: "Page",
   options: {
     name: "Login",
@@ -21,7 +22,7 @@ const headers = {
       unAuth: true,
       auth: false,
       exact: true,
-      component: (props: any) => <Login {...props} onSubmit={loginRequest} />,
+      component: () => <Login onSubmit={loginRequest} />,
     },
   },
 };

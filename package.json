@@ -1,70 +1,31 @@
 {
   "name": "neoadmin-demo",
-  "version": "0.1.0",
-  "homepage": "https://neocodevs.github.io/neoadmin-demo",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest --passWithNoTests"
+  },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.11.0",
-    "@mui/lab": "^5.0.0-alpha.118",
-    "@mui/material": "^5.11.7",
-    "@mui/x-data-grid": "^5.17.22",
-    "@mui/x-date-pickers": "^5.0.17",
-    "@neoco/neoco-backoffice": "^0.19.1",
-    "@neoco/neoco-form": "^0.11.0",
-    "@neoco/neoco-image-uploader": "^0.3.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@tinymce/tinymce-react": "^4.3.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.11",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "bluejay-ui": "^1.26.8",
-    "chart.js": "^4.2.0",
-    "i18next": "^22.4.9",
-    "luxon": "^3.2.1",
-    "notistack": "^2.0.8",
-    "react": "^16.14.0",
+    "@mui/material": "^5.11.8",
+    "chart.js": "^4.2.1",
+    "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-countup": "^6.4.1",
-    "react-dom": "^16.14.0",
-    "react-i18next": "^12.1.4",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-dom": "^18.2.0",
+    "web-vitals": "^3.1.1",
+    "@neoco/neoco-backoffice": "*",
+    "@neoco/neoco-form": "*",
+    "@neoco/neoco-image-uploader": "*"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
   }
 }

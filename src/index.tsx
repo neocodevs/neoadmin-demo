@@ -1,20 +1,24 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { apps, contexts } from "@neoco/neoco-backoffice";
 import { headers } from "./pages";
 
 const { App } = apps;
 const { AuthProvider, ConfigProvider } = contexts;
-ReactDOM.render(
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+
+root.render(
   <React.StrictMode>
     <AuthProvider>
       <ConfigProvider>
         <App headers={headers} />
       </ConfigProvider>
     </AuthProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
